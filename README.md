@@ -41,4 +41,4 @@ Python • Postgres/PostGIS • Oracle • Jenkins • Git/GitHub • Bash • P
 
 - [Census Data for 45202](https://data.census.gov/profile/45202?g=860XX00US45202)
 - [Weather Records - Cincinnati](https://www.wunderground.com/history/monthly/us/oh/cincinnati)
-- Optional: Land use, elevation, NDVI from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) or [OpenStreetMap](https://www.openstreetmap.org/)
+- Land use, elevation, NDVI from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) or [OpenStreetMap](https://www.openstreetmap.org/)
