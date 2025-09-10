@@ -1,32 +1,44 @@
-# Spatial Weather Prediction for Cincinnati (ZIP 45202)
+# Climate-Resilient Infrastructure Monitoring in Cincinnati
 
 ## Overview
+This project addresses climate-driven flooding and sewer overflow risks in Cincinnati by building automated data pipelines and monitoring dashboards. The system consolidates rainfall, stormwater, and infrastructure data into a centralized platform, supporting proactive inspections and resilience planning.
 
-This project aims to predict local weather patterns in Cincinnati’s ZIP code 45202 using historical weather and census data, spatial analysis, and ArcGIS tools. It demonstrates integrating open data with GIS and machine learning for predictive mapping.
+## Objectives
+- Automate ETL workflows for rainfall, sewer, and stormwater datasets.
+- Centralize and standardize infrastructure data in Oracle/Postgres.
+- Enrich datasets with spatial layers (flood zones, elevation).
+- Provide decision-support dashboards via Metabase.
+- Enable cross-departmental collaboration through DataBridge integration.
 
-## Data Sources
+## Architecture
+- **Sources:** NOAA APIs, USGS gauges, City sewer/stormwater DB, ArcGIS floodplain data.
+- **ETL:** Python (pandas, geopandas, requests), Bash/PowerShell, Jenkins for scheduling.
+- **Storage:** Postgres + PostGIS (spatial), Oracle for L&I data.
+- **Dashboards:** Metabase (overflow trends, risk maps, inspection prioritization).
+- **Version Control:** GitHub for pipeline scripts and documentation.
 
-- [Census Data for 45202](https://data.census.gov/profile/45202?g=860XX00US45202)
-- [Weather Records - Cincinnati](https://www.wunderground.com/history/monthly/us/oh/cincinnati)
-- Optional: Land use, elevation, NDVI from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) or [OpenStreetMap](https://www.openstreetmap.org/)
+## Example Dashboards
+- Sewer Overflow Hotspots Map
+- Rainfall vs Flood Risk Trends
+- Infrastructure Vulnerability Index by Neighborhood
 
-## Workflow
+## Tech Stack
+Python • Postgres/PostGIS • Oracle • Jenkins • Git/GitHub • Bash • PowerShell • ArcGIS Online API • Metabase
 
-1. **Data Collection:** Gather weather, census, and optional spatial data.
-2. **Data Preparation:** Clean, geocode, and integrate datasets in ArcGIS.
-3. **Exploratory Analysis:** Map and analyze weather trends and spatial features.
-4. **Prediction Modeling:** Build spatial prediction models (Kriging, regression, etc.).
-5. **Visualization:** Produce and export predictive maps.
-6. **Reporting:** Summarize methods, findings, and recommendations.
-
-## Getting Started
-
-1. Clone this repo.
-2. Download data into `data/raw/`.
-3. Follow the analysis notebook or ArcGIS Pro project workflow.
+## Future Scope
+- ML-based flood prediction models.
+- IoT sensor integration for real-time sewer monitoring.
+- Public-facing climate resilience portal.
+- Satellite imagery analysis (Landsat, Sentinel) for land use and vegetation cover.
 
 ## Credits
 
 - DEM: USGS
 - Population: U.S. Census Bureau
 - Weather: Weather Underground
+
+## Data Sources
+
+- [Census Data for 45202](https://data.census.gov/profile/45202?g=860XX00US45202)
+- [Weather Records - Cincinnati](https://www.wunderground.com/history/monthly/us/oh/cincinnati)
+- Optional: Land use, elevation, NDVI from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) or [OpenStreetMap](https://www.openstreetmap.org/)
